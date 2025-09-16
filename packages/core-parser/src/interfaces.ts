@@ -1,4 +1,4 @@
-import { ClippingType } from "./enums";
+import { ClippingType } from "./enums.js";
 
 export interface Clipping {
     bookTitle: string;

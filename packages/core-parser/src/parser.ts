@@ -1,10 +1,10 @@
 
 import { parse } from 'date-fns';
-import * as crypto from 'node:crypto';
-import { ClippingType } from "./enums";
+//import * as crypto from 'crypto';
+import { ClippingType } from "./enums.js";
 import { Clipping } from "./interfaces";
 
-export function parseRawClippings(clippings) {
+export function parseRawClippings(clippings: string): string[] {
     return clippings.split(/^==========\r?\n/m)
     .map(entry => entry.trim())
     .filter(entry => entry !== '');
@@ -73,7 +73,7 @@ export function parseSingleClipping(clipping: string): Clipping | null {
 
     if (!text) return null;
 
-    const checksum = crypto.createHash('md5').update(text).digest('hex');
+    // const checksum = crypto.createHash('md5').update(text).digest('hex');
         
 
     return {
@@ -83,6 +83,6 @@ export function parseSingleClipping(clipping: string): Clipping | null {
         location,
         dateAdded,
         text,
-        checksum
+        // checksum
     };
 }
