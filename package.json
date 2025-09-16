@@ -1,0 +1,20 @@
+{
+  "name": "nota",
+  "version": "1.0.0",
+  "description": "Nota is a tool to help you make sense of your Kindle highlights. It parses your `My Clippings.txt` file and organizes your highlights by book, making it easy to review and study them.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b . --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/core-parser",
+    "packages/cli"
+  ],
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  }
+}

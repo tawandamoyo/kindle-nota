@@ -1,0 +1,13 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "baseUrl": ".",
+        "resolveJsonModule": true
+    },
+    "references": [
+        { "path": "../core-parser" }
+    ],
+    "include": ["src/**/*"]
+}

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@nota/core-parser": ["./packages/core-parser/src"],
+        }
+    },
+    "files": [],
+    "references": [
+        { "path": "./packages/core-parser" },
+        { "path": "./packages/cli" }
+    ]
+}
