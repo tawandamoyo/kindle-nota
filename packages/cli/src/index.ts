@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import fs from 'fs';
+import fs, { readFileSync } from 'fs';
 import path from 'path';
 import { parse, Clipping } from '@nota/core-parser';
 program
@@ -33,4 +33,31 @@ program
         }
 
     });
-program.parse(process.argv);
+
+program
+    .command('search <clippingsFilePath>/')
+    .description('Search for highlights containing a  specific keyword')
+    .argument('<keyword>', 'Keyword to search for', 'the')
+    .option('-b, --book <bookTitle>', 'Filter by book title')
+    .action(async () => {
+        try {
+            
+        } catch (error) {
+            console.error('❌ Error searching clippings:', error);
+        }
+    });
+
+program
+    .command('list <filePath>')
+    .description('List highlights and notes from specific book or author')
+    .option('-b, --book <bookTitle>', 'Filter by book title')
+    .option('-a, --author <authorName>', 'Filter by author name')
+    .action (async () => {
+        try {
+
+        } catch (error) {
+            console.error('❌ Error listing clippings:', error);
+        }
+
+    });
+
